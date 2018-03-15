@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Titulo de la pagina</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body ng-app="todoApp">
+        <h3 class="text-center">Lista de Tareas</h3>
+
+        <form role="form">
+            <legend>Nueva Tareas</legend>
+        
+            <div class="form-group">
+                <label for="">label</label>
+                <input type="text" class="form-control" placeholder="Descripción" ng-model="nuevaTarea.descripcion">
+                <div id="mensaje">{{nuevaTarea.descripcion}}</div>
+            </div>
+        
+            
+        
+            <button type="submit" class="btn btn-primary">Grabar</button>
+        </form>
+
+        <div class="table-responsive" ng-controller="tareaController">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Tarea a realizar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="tar in tareas track by $index">
+                            <td>{{tar.descripcion}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+
+        <!-- angular-bootstrap -->
+        <script src="bower_components/angular/angular.js"></script>
+        <!-- angular-bootstrap -->
+        <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+
+        <script>
+            angular.module('todoApp', ['ui.bootstrap']);
+        </script>
+
+        <script src="tareaController.js"></script>
+    </body>
+</html>

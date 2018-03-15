@@ -1,0 +1,151 @@
+<doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-whith, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/3.3.7+1/css/sb-admin-2.min.css">
+</head>
+<!-- Comentarios -->
+<body>
+  <header id="wrapper">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">GDG CDE</a>
+      </div>
+      <ul class="nav navbar-top-links navbar-right">
+        <li><a href="#"> Mi perfil </li>
+        <li><a href="#"> Cerrar Sesión </li>
+      </ul>
+
+      <div class="navbar-default sidebar" role="navigation">
+        <ul class="nav" id="side-menu">
+          <li>
+            <a href="#"> Eventos</a>
+          </li>
+          <li>
+            <a href="#"> Talleres</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="page-wrapper">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="page-header">Participantes</h1>
+        </div>
+      </div>
+
+      <!-- Campos -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              A través de este form se crea el participante
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <form id="form-participante">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text" class="form-control" id=email placeholder="Introduzca el email">
+                    </div>
+                    <div class="form-group">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" class="form-control" id=nombre placeholder="Introduzca el nombre">
+                    </div>
+                    <div class="form-group">
+                      <label for="apellido">Apellido</label>
+                      <input type="text" class="form-control" id=apellido placeholder="Introduzca el apellido">
+                    </div>
+                    <div class="form-group">
+                      <label for="direccion">Dirección</label>
+                      <input type="text" class="form-control" id=direccion placeholder="Introduzca la dirección">
+                    </div>
+                    <div class="form-group">
+                      <label for="ciudad">Ciudad</label>
+                      <select type="text" class="form-control" id=ciudad name="ciudad" placeholder="Seleccione la ciudad">
+                        <option>MINGA GUASU</option>
+                        <option selected>CIUDAD DEL ESTE</option>
+                        <option>HERNANDARIAS</option>
+                        <option>PRESIDENTE FRANCO</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="celular">Celular</label>
+                      <input type="text" class="form-control" id=celular placeholder="Introduzca el celular" pattern="[0-9]{9}">
+                    </div>
+                    <div class="form-group">
+                      <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                      <input type="date" class="form-control" id=fechaNacimiento step="1" min="1900-01-01" max="2018-12-31" value="1988-04-18" format="dd/mm/yyyy">
+                    </div>
+                    <div class="form-group">
+                      <label for="genero">Género</label>
+                      <select type="text" class="form-control" id=genero name="genero" placeholder="Seleccione el género">
+                        <option>MASCULINO</option>
+                        <option>FEMENINO</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="universidad">Universidad</label>
+                      <input type="text" class="form-control" id=universidad placeholder="Introduzca la universidad">
+                    </div>
+                    <div class="form-group">
+                      <label for="carrera">Carrera</label>
+                      <input type="text" class="form-control" id=carrera placeholder="Introduzca la carrera">
+                    </div>
+                    <div class="form-group">
+                      <label for="avatarUrl">Avatar</label>
+                      <input type="file" class="form-control" id="avatarUrl" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                      <button  type="button" class="btn btn-success" onclick="enviarDatos()" >Enviar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    </div>
+
+    <script>
+      function enviarDatos() {
+        var email = document.getElementById("email").value;
+        console.log(email);
+        var nombre = document.getElementById("nombre").value;
+        console.log(nombre);
+        var apellido = document.getElementById("apellido").value;
+        console.log(apellido);
+        var direccion = document.getElementById("direccion").value;
+        console.log(direccion);
+        var ciudad = document.getElementById("ciudad").value;
+        console.log(ciudad);
+        var celular = document.getElementById("celular").value;
+        console.log(celular);
+        var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+        console.log(fechaNacimiento);
+        var genero = document.getElementById("genero").value;
+        console.log(genero);
+        var universidad = document.getElementById("universidad").value;
+        console.log(universidad);
+        var carrera = document.getElementById("carrera").value;
+        console.log(carrera);
+        var avatarUrl = document.getElementById("avatarUrl").value;
+        console.log(avatarUrl);
+        /*var file = document.getElementById("avatarUrl").files[0];
+        var blob_url = window.URL.createObjectURL(file);
+        console.log(blob_url);*/
+      }
+    </script>
+
+</body>
+
+</html>
