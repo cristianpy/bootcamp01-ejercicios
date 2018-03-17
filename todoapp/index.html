@@ -20,33 +20,35 @@
     <body ng-app="todoApp">
         <h3 class="text-center">Lista de Tareas</h3>
 
-        <form role="form">
-            <legend>Nueva Tareas</legend>
-        
-            <div class="form-group">
-                <label for="">label</label>
-                <input type="text" class="form-control" placeholder="Descripción" ng-model="nuevaTarea.descripcion">
-                <div id="mensaje">{{nuevaTarea.descripcion}}</div>
-            </div>
-        
+        <div class="container" ng-controller="tareaController">
+                <form role="form" ng-submit="agregarTarea()">
+                        <legend>Nueva Tareas</legend>
+                    
+                        <div class="form-group">
+                            <label for="">label</label>
+                            <input type="text" class="form-control" placeholder="Descripción" ng-model="nuevaTarea.descripcion">
+                            <div id="mensaje">{{nuevaTarea.descripcion}}</div>
+                        </div>
+                    
+                        
+                    
+                        <button type="submit" class="btn btn-primary">Grabar</button>
+                    </form>
             
-        
-            <button type="submit" class="btn btn-primary">Grabar</button>
-        </form>
-
-        <div class="table-responsive" ng-controller="tareaController">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Tarea a realizar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="tar in tareas track by $index">
-                            <td>{{tar.descripcion}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Tarea a realizar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="tar in tareas track by $index">
+                                        <td>{{tar.descripcion}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </div>
         </div>
 
         <!-- angular-bootstrap -->
