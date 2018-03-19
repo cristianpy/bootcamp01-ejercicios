@@ -1,3 +1,5 @@
 /apirest/node_modules
 /apirest/.git
 /apirest/.gitignore
+/todoapp/bower_components
+/todoapp/modules
