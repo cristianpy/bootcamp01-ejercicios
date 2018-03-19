@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('todoApp')
+        .module('gdgAdmin')
         .controller('tareaController', tareaController)
         tareaController.$inject = ['$scope'];
 

@@ -1,0 +1,26 @@
+
+<a class="btn btn-primary" ui-sref="eventos-form" role="button">Crear evento</a>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th colspan="2" >Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="eve in eventos track by $index">
+                <td>{{eve.nombre}}</td>
+                <td>{{eve.direccion}}</td>
+                <td>
+                    <a ui-sref="eventos-edit({id: eve.id})">Editar</a>
+                </td>
+                <td>
+                    <button ng-click="delete(eve.id)" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

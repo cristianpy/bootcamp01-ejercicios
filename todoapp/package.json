@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "nodemon": "^1.17.2"
+    "nodemon": "^1.17.2",
+    "sweetalert": "^2.1.0"
   }
 }

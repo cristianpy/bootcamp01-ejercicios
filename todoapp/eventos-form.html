@@ -1,0 +1,17 @@
+<form role="form" ng-submit="crearEvento(evento) || actualizarEvento(evento)">
+    <legend>Nuevo Evento</legend>
+
+    <div class="form-group">
+        <label for="">Nombre</label>
+        <input type="text" class="form-control" placeholder="Complete el nombre" ng-model="evento.nombre">
+        <label for="">Direccion</label>
+        <input type="text" class="form-control" placeholder="Complete la dirección" ng-model="evento.direccion">
+        <label for="">Descripción</label>
+        <input type="text" class="form-control" placeholder="Complete la descripción" ng-model="evento.descripcion">
+        <!--<div id="mensaje">{{nuevoEvento.nombre}}</div>-->
+    </div>
+
+    <button type="submit" class="btn btn-primary pull-right">Guardar</button>
+
+    <a class="btn btn-default" ui-sref="eventos" role="button">Cancelar</a>
+</form>
