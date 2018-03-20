@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "postgres",
-    "password": "postgres",
-    "database": "gdgadmin",
+    "password": "admin",
+    "database": "gdgadmin_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
