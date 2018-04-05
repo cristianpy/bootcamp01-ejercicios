@@ -5,7 +5,7 @@ module.exports = function(router) {
     router.get('/eventos/:id', eventos.show);
     router.post('/eventos', eventos.create);
     router.put('/eventos/:id', eventos.update);
-    router.delete('/eventos/:id', eventos.delete);
+    router.delete('/eventos/:id', evento.delete);
 
     return router;
 };

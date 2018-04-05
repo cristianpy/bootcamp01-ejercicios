@@ -1,0 +1,118 @@
+<doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-whith, initial-scale=1.0">
+  <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../node_modules/sb-admin-2/dist/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../../node_modules/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+</head>
+<!-- Comentarios -->
+<body ng-app="gdgAdmin">
+  <header id="wrapper">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="login">GDG CDE</a>
+      </div>
+      <ul class="nav navbar-top-links navbar-right">
+        <li><a ui-sref="perfil"> Mi perfil </li>
+        <li><a ui-sref="login"> Cerrar Sesión </li>
+      </ul>
+
+      <div class="navbar-default sidebar" role="navigation">
+        <ul class="nav" id="side-menu">
+          <li>
+            <a ui-sref="home">Home</a>
+          </li>
+          <li>
+            <a ui-sref="eventos">Eventos</a>
+          </li>
+          <li>
+            <a ui-sref="usuarios">Usuarios</a>
+          </li>
+          <li>
+            <a ui-sref="ciudades">Ciudades</a>
+          </li>
+          <li>
+            <a ui-sref="premiosEventos">Premios de los Eventos</a>
+          </li>
+          <li>
+            <a ui-sref="tiposEventos">Tipos de Eventos</a>
+          </li>
+          <li>
+            <a ui-sref="participantes">Participantes</a>
+          </li>
+          <li>
+            <a ui-sref="patrocinadores">Patrocinadores</a>
+          </li>
+          <li>
+            <a ui-sref="lugares">Lugares</a>
+          </li>
+          <li>
+            <a ui-sref="expositores">Expositores</a>
+          </li>
+          <li>
+            <a ui-sref="workshops">Workshops</a>
+          </li>
+          <li>
+            <a ui-sref="tecnologias">Tecnologías</a>
+          </li>
+          <li>
+            <a ui-sref="login">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="page-wrapper">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="page-header">{{ titulo1 }}</h1>
+        </div>
+      </div>
+
+      <!-- Campos -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+                <a>{{titulo2}}</a>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+                    <ui-view></ui-view>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    </div>
+
+    <!-- angular -->
+    <script src="../../bower_components/angular/angular.js"></script>
+    <!-- ui-bootstrap -->
+    <script src="../../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <!-- angular-ui-router -->
+    <script src="../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="../../node_modules/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        angular.module('gdgAdmin', ['ui.bootstrap','ui.router']);
+    </script>
+
+    <script src="route.js"></script>
+    <script src="/public/app/login/loginService.js"></script>
+    <script src="homeController.js"></script>
+    <script src="/public/app/login/loginController.js"></script>
+
+</body>
+
+</html>

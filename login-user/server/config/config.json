@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "gdgadmin_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": "admin",
+    "database": "gdgadmin_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "root",
+    "password": "admin",
+    "database": "gdgadmin_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
